@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7636149547068224a8215f7ceff5389a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 5
   attackCooldown: 2
 --- !u!65 &564275893514246000
 BoxCollider:

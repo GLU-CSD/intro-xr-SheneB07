@@ -12,10 +12,21 @@ public class Projectile : MonoBehaviour
     {
         target = newTarget;
     }
+    void Explode()
+    {
+        // Zoek Health component van target met GetComponent
+        // Als Health script gevonden is, gebruik TakeDamage functie
+        // Gebruik damage variable
+        // Instantiate eventuele effecten
+        target.GetComponent<Health>().TakeDamage(damage);
+
+        Destroy(gameObject);
+        Destroy(gameObject, 1f);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,15 +47,5 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    void Explode()
-    {
-        // Zoek Health component van target met GetComponent
-        // Als Health script gevonden is, gebruik TakeDamage functie
-        // Gebruik damage variable
-        // Instantiate eventuele effecten
-
-        Destroy(gameObject);
-    }
-
 }
-}
+
